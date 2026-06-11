@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="zblog_body">
+
+    <!-- Cabeçalho -->
+    <header class="zblog_header">
+        <h1 class="zblog_header_title">📝 Meu Blog</h1>
+        <p class="zblog_header_subtitle">Um espaço para você me conhecer!</p>
+        <div class="controles">
+            <button onclick="DarkMode()">Dark Mode</button>
+            <button onclick="aumentarFonte()">A+ Aumentar</button>
+            <button onclick="diminuirFonte()">A- Diminuir</button>
+        </div>
+    </header>
+
+    <nav class="zblog_nav">
+        <ul>
+            <li><a href="./pages/about.html">Sobre Mim</a></li>
+            <li><a href="./pages/contact.html">Contato</a></li>
+            <li><a href="./pages/curriculum.html">Currículo</a></li>
+            <li><a href="./pages/receitas.html">Receitas</a></li>
+        </ul>
+    </nav>
+
+    <div class="zblog_container">
+
+        <section class="zblog_intro" id="inicio">
+            <h2 class="zblog_intro_title">Bem-vindo ao Meu Blog!</h2>
+            <p class="zblog_intro_text">Olá! Este é um espaço onde VOCÊ pode me conhecer!!!</p>
+            <p class="zblog_intro_text">Aqui você encontrará conteúdo, idéias, receitas, gostos e muito mais :D </p>
+        </section>
+
+        <section id="posts">
+            <h2 class="zblog_posts_title">Últimas Postagens</h2>
+
+            <div class="zblog_posts_grid">
+
+                <article class="zblog_post_card">
+                    <div class="zblog_post_image">🚀</div>
+                    <div class="zblog_post_content">
+                        <div class="zblog_post_date">15 de Maio, 2026</div>
+                        <h3 class="zblog_post_title">Começando com HTML</h3>
+                        <p class="zblog_post_excerpt">Aprenda os primeiros passos para criar uma página web. HTML é a base de tudo na internet!</p>
+                        <a href="#" class="zblog_post_link">Leia mais →</a>
+                    </div>
+                </article>
+
+                <article class="zblog_post_card">
+                    <div class="zblog_post_image">💡</div>
+                    <div class="zblog_post_content">
+                        <div class="zblog_post_date">22 de Julho, 2024</div>
+                        <h3 class="zblog_post_title">Dicas de CSS Básico</h3>
+                        <p class="zblog_post_excerpt">Descubra como fazer suas páginas ficarem bonitas com CSS. Cores, fontes e espaçamento!</p>
+                        <a href="#" class="zblog_post_link">Leia mais →</a>
+                    </div>
+                </article>
+
+                <article class="zblog_post_card">
+                    <div class="zblog_post_image">🌍</div>
+                    <div class="zblog_post_content">
+                        <div class="zblog_post_date">13 de Setembro, 2020</div>
+                        <h3 class="zblog_post_title">JavaScript para Iniciantes</h3>
+                        <p class="zblog_post_excerpt">Entenda o básico de JavaScript e faça suas páginas web mais interativas e divertidas!</p>
+                        <a href="#" class="zblog_post_link">Leia mais →</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="zblog_footer" id="contato">
+        <p class="zblog_footer_text">&copy; 2026 Meu Site. Todos os direitos reservados.</p>
+        <p class="zblog_footer_text">Entre em contato: zanettejoseeduardo@gmail.com</p>
+    </footer>
+
+    <button onclick="voltarAoTopo()" class="btn-topo">⬆ Topo</button>
+
+    <script src="./js/functions.js"></script>
+</body>
+</html>

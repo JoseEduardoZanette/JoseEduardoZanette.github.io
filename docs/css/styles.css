@@ -1,0 +1,699 @@
+/* CONFIGURAÇÕES GLOBAIS CUIDADO!!!!!!!! XD*/
+
+:root {
+    --font-size-multiplier: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    font-size: calc(16px * var(--font-size-multiplier));
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ecf0f1;
+}
+
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.zblog_header {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+.zblog_header_title {
+    font-size: calc(2.5rem * var(--font-size-multiplier));
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.zblog_header_subtitle {
+    font-size: calc(1rem * var(--font-size-multiplier));
+    opacity: 0.95;
+    margin-bottom: 1rem;
+}
+
+.dossie-banner {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dossie-title {
+    font-size: calc(2.5rem * var(--font-size-multiplier));
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+body.dark-mode .dossie-banner {
+    background: linear-gradient(135deg, #2980b9, #1a5a96);
+}
+
+/* NAVEGAÇÃO */
+
+nav {
+    background-color: #2c3e50;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+nav h2 {
+    color: white;
+    font-size: calc(1.3rem * var(--font-size-multiplier));
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    background-color: #34495e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: calc(0.95rem * var(--font-size-multiplier));
+}
+
+nav a:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.zblog_nav {
+    background-color: #2c3e50;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.zblog_nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.zblog_nav li {
+    margin: 0;
+}
+
+.zblog_nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.65rem 1.15rem;
+    background-color: #34495e;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: calc(0.9rem * var(--font-size-multiplier));
+    display: inline-block;
+}
+
+.zblog_nav a:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* BOTÕES */
+
+button {
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: calc(0.95rem * var(--font-size-multiplier));
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.btn-topo {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    padding: 1rem 1.25rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-topo:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+/* CONTAINERS E SEÇÕES */
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.zblog_container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: #2c3e50;
+    font-size: calc(2rem * var(--font-size-multiplier));
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+body.dark-mode section h2 {
+    color: #ecf0f1;
+    border-bottom-color: #5dade2;
+}
+
+/* APRESENTAÇÃO DE CARDS */
+
+.zblog_intro {
+    background-color: white;
+    padding: 1.8rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
+}
+
+.zblog_intro_title {
+    color: #2c3e50;
+    font-size: calc(1.6rem * var(--font-size-multiplier));
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.zblog_intro_text {
+    color: #555;
+    margin-bottom: 0.6rem;
+    font-size: calc(0.95rem * var(--font-size-multiplier));
+    line-height: 1.5;
+}
+
+.card {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: calc(1.5rem * var(--font-size-multiplier));
+    border-bottom: none;
+}
+
+body.dark-mode .card {
+    background-color: #2a2a2a;
+    color: #ecf0f1;
+}
+
+body.dark-mode .card h2 {
+    color: #3498db;
+}
+
+body.dark-mode .zblog_intro {
+    background-color: #2a2a2a;
+    color: #ecf0f1;
+}
+
+body.dark-mode .zblog_intro_title {
+    color: #3498db;
+}
+
+body.dark-mode .zblog_intro_text {
+    color: #bdc3c7;
+}
+
+/* POSTS */
+
+.zblog_posts_title {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+body.dark-mode .zblog_posts_title {
+    color: #ecf0f1;
+}
+
+.zblog_posts_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.zblog_post_card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.zblog_post_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .zblog_post_card {
+    background-color: #2a2a2a;
+}
+
+.zblog_post_image {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.zblog_post_content {
+    padding: 1.3rem;
+}
+
+.zblog_post_date {
+    color: #7f8c8d;
+    font-size: calc(0.8rem * var(--font-size-multiplier));
+    margin-bottom: 0.6rem;
+}
+
+.zblog_post_title {
+    color: #2c3e50;
+    margin-bottom: 0.6rem;
+    font-size: calc(1.2rem * var(--font-size-multiplier));
+    font-weight: 700;
+}
+
+body.dark-mode .zblog_post_title {
+    color: #3498db;
+}
+
+.zblog_post_excerpt {
+    color: #555;
+    font-size: calc(0.9rem * var(--font-size-multiplier));
+    margin-bottom: 0.9rem;
+    line-height: 1.5;
+}
+
+body.dark-mode .zblog_post_excerpt {
+    color: #bdc3c7;
+}
+
+.zblog_post_link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.zblog_post_link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* FORMULÁRIOS */
+
+.login-container {
+    max-width: 450px;
+    margin: 4rem auto;
+    padding: 2.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+}
+
+.login-container h1,
+.login-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.login-container input,
+.login-container textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: calc(0.95rem * var(--font-size-multiplier));
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.login-container input:focus,
+.login-container textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.login-container button {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+body.dark-mode .login-container {
+    background-color: #2a2a2a;
+    color: #ecf0f1;
+}
+
+body.dark-mode .login-container h1,
+body.dark-mode .login-container h2 {
+    color: #3498db;
+}
+
+body.dark-mode .login-container input,
+body.dark-mode .login-container textarea {
+    background-color: #1a1a1a;
+    color: #ecf0f1;
+    border-color: #444;
+}
+
+body.dark-mode .login-container input:focus,
+body.dark-mode .login-container textarea:focus {
+    border-color: #3498db;
+}
+
+/* IMAGENS E MÍDIA EM GERAL SE QUISER ADD MAIS */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 1rem 0;
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+    background-color: #2c3e50;
+    color: white;
+    border-top: 3px solid #3498db;
+}
+
+.zblog_footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 3px solid #3498db;
+}
+
+.zblog_footer_text {
+    margin: 0.5rem 0;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: calc(0.95rem * var(--font-size-multiplier));
+}
+
+body.dark-mode footer {
+    background-color: #1a1a1a;
+    border-top-color: #3498db;
+}
+
+/* LISTAS E ELEMENTOS */
+
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #3498db;
+    margin: 2rem 0;
+    opacity: 0.3;
+}
+
+/* ACESSBILIDADES */
+
+.btn-acessibilidade {
+    background-color: #e74c3c;
+}
+
+.btn-acessibilidade:hover {
+    background-color: #c0392b;
+}
+
+.secao {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    background-color: #34495e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.secao:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+.musica-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode .musica-label {
+    color: #3498db;
+}
+
+.controles {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+
+.controles button {
+    margin: 0;
+    padding: 0.65rem 1rem;
+    font-size: calc(0.9rem * var(--font-size-multiplier));
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.controles button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVIDADES */
+
+@media (max-width: 768px) {
+    .zblog_header_title {
+        font-size: calc(1.8rem * var(--font-size-multiplier));
+    }
+
+    .dossie-title {
+        font-size: calc(1.8rem * var(--font-size-multiplier));
+    }
+
+    section h2 {
+        font-size: calc(1.5rem * var(--font-size-multiplier));
+    }
+
+    nav {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.6rem 1rem;
+        font-size: calc(0.9rem * var(--font-size-multiplier));
+    }
+
+    .zblog_posts_grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .login-container {
+        margin: 2rem 1rem;
+    }
+
+    .btn-topo {
+        right: 1rem;
+        bottom: 1rem;
+        padding: 0.8rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 0.5rem;
+    }
+
+    .zblog_header {
+        padding: 2rem 0.5rem;
+    }
+
+    .dossie-banner {
+        padding: 2rem 1rem;
+    }
+
+    nav {
+        padding: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    nav h2 {
+        font-size: calc(1.1rem * var(--font-size-multiplier));
+    }
+
+    .zblog_header_title {
+        font-size: calc(1.5rem * var(--font-size-multiplier));
+    }
+
+    .dossie-title {
+        font-size: calc(1.5rem * var(--font-size-multiplier));
+    }
+
+    section h2 {
+        font-size: calc(1.3rem * var(--font-size-multiplier));
+    }
+
+    .controles {
+        gap: 0.5rem;
+    }
+
+    .controles button {
+        padding: 0.6rem 0.9rem;
+        font-size: calc(0.85rem * var(--font-size-multiplier));
+    }
+}
+
+/* LINK DE APOIO: https://github.com/yurimutti/recursos-frontend */
