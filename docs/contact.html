@@ -4,15 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Contato</title>
 </head>
 
 <body>
 
-    <header>
+    <header class="zblog_header">
         <h1>Contato</h1>
+        
+        <div class="controles">
+            <button onclick="DarkMode()">Dark Mode</button>
+            <button onclick="aumentarFonte()">A+ Aumentar</button>
+            <button onclick="diminuirFonte()">A- Diminuir</button>
+        </div>
     </header>
+
+    <nav class="zblog_nav">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">Sobre Mim</a></li>
+            <li><a href="./curriculum.html">Currículo</a></li>
+            <li><a href="./contact.html">Contato</a></li>
+            <li><a href="./receitas.html">Receitas</a></li>
+        </ul>
+    </nav>
 
     <main class="login-container">
 
@@ -97,31 +113,6 @@
                 <button type="reset">
                     Limpar
                 </button>
-
-                <br>
-                <br>
-
-                <button
-                    type="button"
-                    class="btn-acessibilidade"
-                    onclick="DarkMode()">
-                    Dark Mode
-                </button>
-
-                <button
-                    type="button"
-                    class="btn-acessibilidade"
-                    onclick="aumentarFonte()">
-                    Aumentar Fonte
-                </button>
-
-                <button
-                    type="button"
-                    class="btn-acessibilidade"
-                    onclick="diminuirFonte()">
-                    Diminuir Fonte
-                </button>
-                <button onclick="window.history.back()">← Voltar Currículo</button>
             </form>
 
         </section>
@@ -134,7 +125,7 @@
         <p>© 2026 - Sistema de Contato, Criado por José Eduardo Zanette</p>
     </footer>
 
-    <script src="../js/functions.js"></script>
+    <script src="./js/functions.js"></script>
 
 </body>
 
